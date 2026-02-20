@@ -1,11 +1,11 @@
 <script setup></script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <header><h1>Artículos App</h1></header>
+  <main>
+    <router-view />
+  </main>
+  <footer>Ies el Grao - DWEC - Curso 2025/26</footer>
 </template>
 
 <style scoped></style>
