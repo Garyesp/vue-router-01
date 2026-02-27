@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <v-container max-width="800px">
     <v-col>

@@ -1,16 +1,29 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
-const articles = [
-  { title: "Artículo 1", description: "Descripción de artículo 1", price: 10 },
-  { title: "Artículo 2", description: "Descripción de artículo 2", price: 10 },
-  { title: "Artículo 3", description: "Descripción de artículo 3", price: 10 },
-];
+const articles = ref([]);
+const loading = ref(true);
+const error = ref(null);
 
-const backToHome = () => router.push({ name: "home" });
+onMounted(async () => {
+  try {
+    const response = await fetch("/mockData/articles.json");
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error("Error cargando los datos");
+    }
+    articles.value = data;
+  } catch (e) {
+    error.value = e.message;
+  } finally {
+    loading.value = false;
+  }
+});
 </script>
 
 <template>
