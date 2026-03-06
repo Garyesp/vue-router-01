@@ -6,7 +6,6 @@ defineProps({
 
 <template>
   <v-container>
-    <v-col>{{ articles }}</v-col>
     <v-col>
       <header>
         <v-container>

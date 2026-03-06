@@ -5,9 +5,16 @@ import { useRoute, useRouter } from "vue-router";
 const router = useRouter();
 const route = useRoute();
 
+const emit = defineEmits(["create-article"]);
+
 const title = ref("");
 const description = ref("");
 const price = ref(0);
+
+const createArticle = (newArticle) => {
+  emit("create-article", newArticle);
+  router.push({ name: "list-articles" });
+};
 </script>
 <template>
   <header>
@@ -35,7 +42,7 @@ const price = ref(0);
         <!-- form actions -->
         <v-container>
           <v-row>
-            <v-btn @click="console.log({ title, description, price })">
+            <v-btn @click="createArticle({ title, description, price })">
               Crear
             </v-btn>
             <v-btn @click=""> Limpiar </v-btn>
