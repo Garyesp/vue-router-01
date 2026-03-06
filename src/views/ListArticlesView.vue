@@ -1,31 +1,3 @@
-<script setup>
-import { ref, onMounted } from "vue";
-import { useRoute, useRouter } from "vue-router";
-
-const router = useRouter();
-const route = useRoute();
-
-const articles = ref([]);
-const loading = ref(true);
-const error = ref(null);
-
-onMounted(async () => {
-  try {
-    const response = await fetch("/mockData/articles.json");
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error("Error cargando los datos");
-    }
-    articles.value = data;
-  } catch (e) {
-    error.value = e.message;
-  } finally {
-    loading.value = false;
-  }
-});
-</script>
-
 <template>
   <v-container>
     <v-col>
