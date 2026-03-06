@@ -38,7 +38,7 @@ const createArticle = (newArticle) => articles.value.push(newArticle);
           <v-col class="text-center">
             <v-btn
               v-if="$route.name !== 'home'"
-              @click="$router.push({ name: 'list-articles' })"
+              @click="$router.push({ name: 'home' })"
               >Volver</v-btn
             >
             <p>Ies el Grao - DWEC - Curso 2025/26</p>
