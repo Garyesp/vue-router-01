@@ -1,22 +1,30 @@
 [
   {
+    "id": 1,
     "title": "Wireless Mouse",
     "description": "Ergonomic wireless mouse with adjustable DPI and USB receiver.",
-    "price": 19.99
+    "price": 19.99,
+    "categoryId": 2
   },
   {
+    "id": 2,
     "title": "Mechanical Keyboard",
     "description": "Compact mechanical keyboard with RGB backlighting and blue switches.",
-    "price": 69.9
+    "price": 69.9,
+    "categoryId": 2
   },
   {
+    "id": 3,
     "title": "27-inch Monitor",
     "description": "Full HD IPS monitor with thin bezels and HDMI connectivity.",
-    "price": 189.5
+    "price": 189.5,
+    "categoryId": 1
   },
   {
+    "id": 4,
     "title": "USB-C Hub",
     "description": "Multiport USB-C hub with HDMI, USB 3.0, and SD card reader.",
-    "price": 34.95
+    "price": 34.95,
+    "categoryId": 4
   }
 ]
