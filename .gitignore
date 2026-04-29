@@ -37,3 +37,9 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Documentacion
+docs/*
+
+# ayuda ia
+.github/copilot-instructions.md
