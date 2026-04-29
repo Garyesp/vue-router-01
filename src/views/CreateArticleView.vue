@@ -61,6 +61,12 @@ const submit = () => {
               Crear
             </v-btn>
             <v-btn variant="outlined" @click="clearForm">Limpiar</v-btn>
+            <v-btn
+              variant="outlined"
+              @click="router.push({ name: 'list-articles' })"
+            >
+              Cancelar
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
